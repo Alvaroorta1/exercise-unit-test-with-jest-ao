@@ -12,5 +12,18 @@ function fromDollarToYen ( dolar) {
     return parseFloat(yen.toFixed(1)) 
 } 
 
-module.exports = { sum, fromDollarToYen }; 
+function fromEuroToDolar (euro) {
+    const euroToDolar=1.07 
+    const dolar= euro * euroToDolar
+    return parseFloat(dolar.toFixed(1)) 
+} 
+
+function fromYenToPound (yen) {
+    const euroToYen=156.5
+    const euroToPound=0.87
+    const euro= yen / euroToYen 
+    const pound= euro * euroToPound 
+    return parseFloat(pound.toFixed(1)) 
+}
+module.exports = { sum, fromDollarToYen, fromYenToPound, fromEuroToDolar }; 
 
